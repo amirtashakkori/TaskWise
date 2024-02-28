@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.CalendarView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.example.taskmanager.R;
 import com.example.taskwise.Main.Adapter.EventAdapter;
@@ -26,6 +27,7 @@ import com.example.taskwise.SharedPreferences.AppSettingContainer;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class CalendarActivity extends AppCompatActivity implements EventAdapter.changeListener , CalendarContract.view {
 
@@ -33,12 +35,11 @@ public class CalendarActivity extends AppCompatActivity implements EventAdapter.
     RecyclerView eventsRv;
     RelativeLayout backBtn;
     LinearLayout emptyState , taskList;
-    List<Event> events;
 
     AppSettingContainer settingContainer;
     EventAdapter adapter;
     CalendarContract.presentor presentor;
-    SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy");
+    SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy" , Locale.US);
 
     public void cast(){
         calendar = findViewById(R.id.calendar);

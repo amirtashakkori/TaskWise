@@ -65,6 +65,7 @@ public class UserInfoActivity extends AppCompatActivity {
         } else {
             backBtn.setVisibility(View.GONE);
         }
+
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,9 +75,9 @@ public class UserInfoActivity extends AppCompatActivity {
 
                 if (name.length() > 0 && family.length() > 0 && expertise.length() > 0){
                     userContainer.saveInfo(nameEt.getText().toString() , familyEt.getText().toString() , expertiseEt.getText().toString());
-                    finish();
                     Intent intent = new Intent(UserInfoActivity.this , MainActivity.class);
                     startActivity(intent);
+                    finish();
 
                     if (!userContainer.getName().equals(""))
                         Toast.makeText(UserInfoActivity.this, "Saving Info Completed!", Toast.LENGTH_SHORT).show();
