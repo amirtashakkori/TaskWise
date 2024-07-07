@@ -40,7 +40,7 @@ public class TaskDetailActivity extends AppCompatActivity implements TaskDetailC
 
     EditText taskTitleEt , descriptionEt;
     AppCompatButton submitTaskBtn;
-    TextView spinnerTv , headerTv;
+    TextView spinnerTv , headerTv , outDateTv;
     Spinner timePeriodSpinner , importanceSpinner ;
     RelativeLayout deleteTaskBtn , backBtn;
 
@@ -64,6 +64,7 @@ public class TaskDetailActivity extends AppCompatActivity implements TaskDetailC
         headerTv = findViewById(R.id.headerTv);
         deleteTaskBtn = findViewById(R.id.deleteTaskBtn);
         backBtn = findViewById(R.id.backBtn);
+        outDateTv = findViewById(R.id.outDateTv);
     }
 
     @Override
@@ -122,11 +123,18 @@ public class TaskDetailActivity extends AppCompatActivity implements TaskDetailC
     }
 
     public void setSpinners(){
-        String[] period_spinner_items = {getString(R.string.inDayAhead) , getString(R.string.inThreeDays) , getString(R.string.inThisWeek) , getString(R.string.inThisMonth)};
-        periodSpinnerAdapter = new ArrayAdapter<String>(this , R.layout.item_period_spinner , R.id.spinnerTv , period_spinner_items);
-        periodSpinnerAdapter.setDropDownViewResource(R.layout.item_spinner_dropdown);
-        timePeriodSpinner.setAdapter(periodSpinnerAdapter);
-        timePeriodSpinner.setSelection(expiredDate);
+        if (task != null && task.getTime_period() == 4){
+            outDateTv.setVisibility(View.VISIBLE);
+            timePeriodSpinner.setVisibility(View.GONE);
+        } else {
+            outDateTv.setVisibility(View.GONE);
+            timePeriodSpinner.setVisibility(View.VISIBLE);
+            String[] period_spinner_items = {getString(R.string.inDayAhead) , getString(R.string.inThreeDays) , getString(R.string.inThisWeek) , getString(R.string.inThisMonth)};
+            periodSpinnerAdapter = new ArrayAdapter<String>(this , R.layout.item_period_spinner , R.id.spinnerTv , period_spinner_items);
+            periodSpinnerAdapter.setDropDownViewResource(R.layout.item_spinner_dropdown);
+            timePeriodSpinner.setAdapter(periodSpinnerAdapter);
+            timePeriodSpinner.setSelection(expiredDate);
+        }
 
         String[] importance_spinner_items = {getString(R.string.highImportance) , getString(R.string.normalPriority) , getString(R.string.lowPriority)};
         importanceSpinnerAdapter = new ArrayAdapter<String>(this , R.layout.item_importance_spinner , R.id.spinnerTv , importance_spinner_items);

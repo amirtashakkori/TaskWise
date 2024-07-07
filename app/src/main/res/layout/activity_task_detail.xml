@@ -191,6 +191,17 @@
                             android:layout_below="@id/timePeriodTv"
                             android:layout_marginStart="8dp">
 
+                            <TextView
+                                android:id="@+id/outDateTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="56dp"
+                                android:spinnerMode="dropdown"
+                                android:textSize="14sp"
+                                android:visibility="gone"
+                                android:textColor="?colorAccent"
+                                android:text="@string/outDate"
+                                style="@style/SpinnerTheme"/>
+
                             <Spinner
                                 android:id="@+id/timePeriodSpinner"
                                 android:layout_width="wrap_content"

@@ -43,6 +43,7 @@
     <string name="highImportance">High priority</string>
     <string name="normalPriority">Normal task</string>
     <string name="lowPriority">Low priority</string>
+    <string name="outDate">OutDated</string>
 
     <string name="createNewTask">Create new task</string>
     <string name="createTask">Create task</string>

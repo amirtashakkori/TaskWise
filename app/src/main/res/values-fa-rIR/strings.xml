@@ -44,6 +44,7 @@
     <string name="highImportance">خیلی مهم</string>
     <string name="normalPriority">روزمره</string>
     <string name="lowPriority">نه چندان مهم</string>
+    <string name="outDate">منقضی شده</string>
 
     <string name="createNewTask">ساخت وظیفه جدید</string>
     <string name="createTask">ذخیره وظیفه</string>
