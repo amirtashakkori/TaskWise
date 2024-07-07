@@ -1,7 +1,7 @@
 ![Theme](https://github.com/amirtashakkori/TaskWise/assets/110338407/d4a91c26-9b54-4374-9c2f-cbb4e84caecf)
 
 
-TaskWise Project Description TaskWise is a personal task and event management application developed using Java and the MVP architecture. This project incorporates object-oriented principles and utilizes databases and the Room library for implementation.
+TaskWise is a personal task and event management application developed using Java and the MVP architecture. This project incorporates object-oriented principles and utilizes databases and the Room library for implementation.
 
 Key Challenges: The primary challenges of this project include managing the Android database for local data storage on the device and handling time-related concepts in Java and the Android Studio environment.
 
