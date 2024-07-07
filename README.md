@@ -15,3 +15,6 @@ Project Features:
 
 
 The application supports both English and Persian languages and offers three unique color themes.
+
+Contact me :
+Email : amir.t.m.2001@gmail.com
