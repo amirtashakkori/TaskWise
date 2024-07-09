@@ -1,3 +1,4 @@
+#TaskWise
 ![Theme](https://github.com/amirtashakkori/TaskWise/assets/110338407/309a77cb-166d-44e0-a9c3-8cf7cec50de7)
 
 
